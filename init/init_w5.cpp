@@ -90,8 +90,10 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "LG-D325");
         property_set("ro.build.description", "w5ds_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
         property_set("ro.build.fingerprint", "lge/w5ds_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
+        property_set("persist.multisim.config", "dsds");
         property_set("persist.radio.multisim.config", "dsds");
-	property_set("persist.multisim.config", "dsds");
+        property_set("persist.radio.dont_use_dsd", "true");
+        property_set("ro.telephony.ril.config", "simactivation");
         property_set("telephony.lteOnCdmaDevice", "0");
     } else if (strncmp(serial, "LGMS323", 7) == 0) {
         property_set("ro.product.device", "w5");
