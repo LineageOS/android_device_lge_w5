@@ -59,7 +59,7 @@ lib/liblgftmitem.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8610.so
+lib/hw/camera.vendor.msm8610.so
 lib/libchromatix_hi543_common.so
 lib/libchromatix_hi543_default_video.so
 lib/libchromatix_hi543_preview.so
