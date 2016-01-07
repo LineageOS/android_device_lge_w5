@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8610 \
     keystore.msm8610 \
     gps.msm8610 \
-    copybit.msm8610\
+    camera.msm8610 \
+    copybit.msm8610 \
     gralloc.msm8610 \
     hwcomposer.msm8610 \
     lights.msm8610 \
