@@ -2,6 +2,9 @@
 
 model=`cat /proc/cmdline | awk '{print $16}'| awk -F= '{print $2}'`
 
+rm /system/bin/irrcServer
+rm -rf /system/app/QuicksetSDK
+rm -rf /system/app/QuickRemote
 
 case $model in
      "LG-D320")
