@@ -38,6 +38,7 @@ etc/firmware/Signedrompatch_v21.bin
 etc/firmware/Signedrompatch_v24.bin
 etc/firmware/Signedrompatch_v30.bin
 etc/firmware/nfc_test.bin
+vendor/firmware/libpn547_fw.so
 
 # ACDB
 etc/acdbdata/Bluetooth_cal.acdb
