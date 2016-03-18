@@ -131,13 +131,3 @@ vendor/lib/libqomx_jpegenc.so
 # FM radio
 bin/fm_qsoc_patches
 
-# Sensors
-vendor/lib/hw/sensors.default.so
-vendor/lib/libsensor1.so
-vendor/lib/libsensor_reg.so
-bin/sensors.qcom
-vendor/lib/libbmc050.so
-vendor/lib/libsensor_test.so
-vendor/lib/libsensor_thresh.so
-vendor/lib/libsensor_user_cal.so
-
