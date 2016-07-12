@@ -59,13 +59,12 @@ int check_cmdline(const char param[]) {
                         word = strtok(NULL, delims);
                 }
         }
-    }	
+    }
     fclose(file);
     return 0;
 }
 
- 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void vendor_load_properties()
 {
     char serial[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
@@ -109,6 +108,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
     }
+
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
