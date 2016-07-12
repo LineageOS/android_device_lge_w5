@@ -65,7 +65,7 @@ int check_cmdline(const char param[]) {
 }
 
  
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void vendor_load_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char serial[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
