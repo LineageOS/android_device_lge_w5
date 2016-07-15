@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "3fa7e38b_7d4ad727",
+        "filename": "init/init_w5.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2016-07-15T11:41:55Z",
+      "side": 1,
+      "message": "There\u0027s a cleaner way to do cmdline checks, take a look at https://github.com/CyanogenMod/android_device_oppo_find7-common/blob/cm-13.0/init/init_find7.cpp",
+      "revId": "43aa5c29e198f3b44b8ea6f6a38b0a3bdf725c43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3fa7e38b_7dc5f78d",
         "filename": "init/init_w5.cpp",
         "patchSetId": 2
