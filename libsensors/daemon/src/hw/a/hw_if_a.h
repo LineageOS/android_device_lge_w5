@@ -87,7 +87,7 @@
 
 #ifndef __HW_IF_A_H
 #define __HW_IF_A_H
-#define DEV_NAME_A "accelerometer"
+#define DEV_NAME_A "bma2x2"
 
 #define HW_A_DATA_FULLRANGE
 #define HW_A_OFFSET_USE_FS
@@ -100,7 +100,7 @@
 #define SYSFS_NODE_NAME_BMA_ENABLE "enable"
 #define SYSFS_NODE_NAME_BMA_GRANGE "range"
 #define SYSFS_NODE_NAME_BMA_BW "bandwidth"
-#define SYSFS_NODE_NAME_BMA_MODE "mode"
+#define SYSFS_NODE_NAME_BMA_MODE "op_mode"
 #define SYSFS_NODE_NAME_BMA_DELAY "delay"
 #define SYSFS_NODE_NAME_BMA_OFFSET_FILT_X "offset_x"
 #define SYSFS_NODE_NAME_BMA_OFFSET_FILT_Y "offset_y"

@@ -96,7 +96,7 @@
 #define BMM_HIGHACCURACY_REPZ   82
 #define BMM_ENHANCED_REPZ       26
 
-#define DEV_NAME_M "magnetic_field"
+#define DEV_NAME_M "bmm050"
 
 #define SYSFS_NODE_NAME_BMM_VALUE "value"
 #define SYSFS_NODE_NAME_BMM_ENABLE "enable"

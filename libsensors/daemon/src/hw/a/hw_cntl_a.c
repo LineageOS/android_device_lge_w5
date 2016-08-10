@@ -128,7 +128,7 @@ static const struct value_map map_a_bw[HW_A_BW_MAX] = {
 
 static const char *driver_names_tbl[] =
 {
-    "accelerometer",
+    "bma2x2",
     NULL
 };
 
