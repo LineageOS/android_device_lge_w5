@@ -1,6 +1,5 @@
 /*
    Copyright (c) 2014, The Linux Foundation. All rights reserved.
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -13,7 +12,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -66,12 +64,11 @@ int check_cmdline(const char param[]) {
 
 void vendor_load_properties()
 {
-    char serial[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
 
-    property_get("ro.boot.serialno", serial);
-    if (strncmp(serial, "LGD320", 6) == 0) {
+    std::string serial = property_get("ro.boot.serialno");
+    if (serial.substr(0,6) == "LGD320") {
+        
         if (check_cmdline("model.name=LG-D320n") == 1) {
                 property_set("ro.product.device", "w5");
                 property_set("ro.product.model", "LG-D320n");
@@ -83,33 +80,40 @@ void vendor_load_properties()
         property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.A1398228431 1398228431 release-keys");
         property_set("ro.build.fingerprint", "lge/w5_global_com/w5:4.4.2/KOT49I.A1398228431/1398228431:user/release-keys");
         property_set("persist.radio.multisim.config", "");
+        property_set("persist.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
-    } else if (strncmp(serial, "LGD325", 6) == 0) {
-        property_set("ro.product.device", "w5ds");
-        property_set("ro.product.model", "LG-D325");
+    } else if (serial.substr(0,6) == "LGD325") {
+        
+        if (check_cmdline("model.name=LG-D325") == 1) {
+                property_set("ro.product.model", "LG-D325");
+                property_set("ro.product.device", "w5ds");
+                property_set("ro.nfc.port", "I2C");
+        } 
         property_set("ro.build.description", "w5ds_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
         property_set("ro.build.fingerprint", "lge/w5ds_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
         property_set("persist.multisim.config", "dsds");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.radio.dont_use_dsd", "true");
         property_set("ro.telephony.ril.config", "simactivation");
-        property_set("telephony.lteOnCdmaDevice", "0");
-    } else if (strncmp(serial, "LGMS323", 7) == 0) {
-        property_set("ro.product.device", "w5");
+    } else if (serial.substr(0,6) == "LGMS323") {
+        
         property_set("ro.product.model", "LG-MS323");
+        property_set("ro.product.device", "w5");
         property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
         property_set("ro.build.fingerprint", "lge/w5_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
         property_set("persist.radio.multisim.config", "");
+        property_set("persist.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
     } else {
-        /* XXX */
+        /* None of the above matches */
         property_set("ro.product.device", "w5");
-        property_set("ro.product.model", "Please write your model name to vm03@yandex.ru");
+        property_set("ro.product.model", "Unknown model. Please message the maintainer!");
         property_set("persist.radio.multisim.config", "");
+        property_set("persist.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
+    std::string device = property_get("ro.product.device");
+    strlcpy(devicename, device.c_str(), sizeof(devicename));
+    ERROR("Found hardware id: %s setting build properties for %s device\n", serial.c_str(), devicename);
 }
