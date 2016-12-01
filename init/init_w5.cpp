@@ -95,7 +95,7 @@ void vendor_load_properties()
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.radio.dont_use_dsd", "true");
         property_set("ro.telephony.ril.config", "simactivation");
-    } else if (serial.substr(0,6) == "LGMS323") {
+    } else if (serial.substr(0,7) == "LGMS323") {
         
         property_set("ro.product.model", "LG-MS323");
         property_set("ro.product.device", "w5");
