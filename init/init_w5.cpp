@@ -77,8 +77,8 @@ void vendor_load_properties()
                 property_set("ro.product.device", "w5");
                 property_set("ro.product.model", "LG-D320");
         }
-        property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.A1398228431 1398228431 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5_global_com/w5:4.4.2/KOT49I.A1398228431/1398228431:user/release-keys");
+        property_set("ro.build.description", "cm_w5-userdebug 7.1 NDE63X cf84cd3c64 test-keys");
+        property_set("ro.build.fingerprint", "lge/cm_w5/w5:7.1/NDE63X/cf84cd3c64:userdebug/test-keys");
         property_set("persist.radio.multisim.config", "");
         property_set("persist.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
@@ -89,8 +89,8 @@ void vendor_load_properties()
                 property_set("ro.product.device", "w5ds");
                 property_set("ro.nfc.port", "I2C");
         } 
-        property_set("ro.build.description", "w5ds_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5ds_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
+        property_set("ro.build.description", "cm_w5ds-userdebug 7.1 NDE63X cf84cd3c64 test-keys");
+        property_set("ro.build.fingerprint", "lge/cm_w5ds/w5ds:7.1/NDE63X/cf84cd3c64:userdebug/test-keys");
         property_set("persist.multisim.config", "dsds");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.radio.dont_use_dsd", "true");
@@ -99,8 +99,8 @@ void vendor_load_properties()
         
         property_set("ro.product.model", "LG-MS323");
         property_set("ro.product.device", "w5");
-        property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
+        property_set("ro.build.description", "cm_w5-userdebug 7.1 NDE63X cf84cd3c64 test-keys");
+        property_set("ro.build.fingerprint", "lge/cm_w5/w5:7.1/NDE63X/cf84cd3c64:userdebug/test-keys");
         property_set("persist.radio.multisim.config", "");
         property_set("persist.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
