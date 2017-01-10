@@ -41,7 +41,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/w5
 TARGET_BOOTLOADER_BOARD_NAME := w5
 
 # Kernel
-TARGET_KERNEL_CONFIG := w5_cyanogenmod_defconfig
+TARGET_KERNEL_CONFIG := w5_lineageos_defconfig
 
 # Filesystem,
 BOARD_FLASH_BLOCK_SIZE := 131072
