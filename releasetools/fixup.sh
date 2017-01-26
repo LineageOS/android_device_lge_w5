@@ -1,7 +1,6 @@
 #!/sbin/sh
 
-model=`cat /proc/cmdline | awk '{print $17}'| awk -F= '{print $2}'`
-
+model=`cat /proc/cmdline | sed -e 's/^.*model.name=//' -e 's/ .*$//'`
 
 case $model in
      "LG-D320")
