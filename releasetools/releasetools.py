@@ -18,7 +18,7 @@ import re
 
 def InstallEnd_SetSpecificDeviceConfigs(info):
     info.script.Mount("/system");
-    info.script.AppendExtra('run_program("/tmp/install/bin/fixup.sh")');
+    info.script.AppendExtra('run_program("/tmp/install/bin/fixup.sh");');
     info.script.Unmount("/system");
     return
 
