@@ -30,9 +30,9 @@
     <integer name="config_deviceCoverType">3</integer>
 
     <!-- Rectangular parameters (config_deviceCoverType == 2) -->
-    <integer name="rectangular_window_top" translatable="false">30</integer>
-    <integer name="rectangular_window_left" translatable="false">70</integer>
-    <integer name="rectangular_window_width" translatable="false">400</integer>
+    <integer name="rectangular_window_top" translatable="false">20</integer>
+    <integer name="rectangular_window_left" translatable="false">80</integer>
+    <integer name="rectangular_window_width" translatable="false">320</integer>
     <integer name="rectangular_window_height" translatable="false">400</integer>
 
 </resources>
