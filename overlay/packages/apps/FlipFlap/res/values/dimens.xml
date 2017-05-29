@@ -17,16 +17,13 @@
  Also add information on how to contact you by electronic and paper mail.
 
 -->
+
 <resources>
 
-    <!-- Define Device Lid Style
-
-     1 HTC Style Dotcase
-     2 Asus/LG Style Circle Window Cover
-     3 Rectangular window Cover
-     4 Iceview style case where the entire screen is visible
-
-     For example, a device with Asus Circle Cover would set 2 -->
-    <integer name="config_deviceCoverType">3</integer>
+    <!-- Rectangular parameters (config_deviceCoverType == 3) -->
+    <dimen name="rectangular_window_top">20px</dimen>
+    <dimen name="rectangular_window_left">80px</dimen>
+    <dimen name="rectangular_window_width">320px</dimen>
+    <dimen name="rectangular_window_height">400px</dimen>
 
 </resources>
