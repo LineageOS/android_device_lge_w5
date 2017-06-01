@@ -64,6 +64,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Audio properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.calfile0=/etc/ACDB/Bluetooth_cal.acdb \
+    persist.audio.calfile1=/etc/ACDB/General_cal.acdb \
+    persist.audio.calfile2=/etc/ACDB/Global_cal.acdb \
+    persist.audio.calfile3=/etc/ACDB/Handset_cal.acdb \
+    persist.audio.calfile4=/etc/ACDB/Hdmi_cal.acdb \
+    persist.audio.calfile5=/etc/ACDB/Headset_cal.acdb \
+    persist.audio.calfile6=/etc/ACDB/Speaker_cal.acdb
+
 # Inherit from msm8226-common
 $(call inherit-product, device/lge/msm8226-common/msm8226.mk)
 $(call inherit-product, vendor/lge/w5/w5-vendor.mk)
